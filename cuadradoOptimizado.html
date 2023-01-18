@@ -1,0 +1,42 @@
+<canvas width="600" height="400">
+	
+
+</canvas>
+
+<script>
+
+
+function dijubarCuadrado(x,y,color)
+{	
+var pantalla = document.querySelector("canvas");
+var pincel= pantalla.getContext("2d");
+pincel.fillStyle = color; //propiedad
+pincel.fillRect(x,y,50,50); //funcion
+pincel.strokeStyle = "black";
+pincel.strokeRect(x,y,50,50);
+}// fin funcion dibujar cuadrado
+
+/*
+var x =0;
+
+while(x<600)
+{
+x = x+50;
+dijubarCuadrado(x,0,"red");
+dijubarCuadrado(x,50,"yellow");
+dijubarCuadrado(x,100,"green");
+}// fin ciclo while
+*/
+
+
+
+for(var x=0; x<600; x=x+50)
+{
+
+dijubarCuadrado(x,0,"red");
+dijubarCuadrado(x,50,"yellow");
+dijubarCuadrado(x,100,"green");
+
+}// fin del ciclo for
+
+</script>
