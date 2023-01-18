@@ -1,0 +1,66 @@
+<canvas width="600" height="400">
+	
+
+</canvas>
+
+<script>
+
+/*
+function dijubarCuadradoRojo(x,y)
+{	
+var pantalla = document.querySelector("canvas");
+var pincel= pantalla.getContext("2d");
+pincel.fillStyle = "red"; //propiedad
+pincel.fillRect(x,y,50,50); //funcion
+pincel.strokeStyle = "black";
+pincel.strokeRect(x,y,50,50);
+}// fin funcion dibujar cuadrado rojo
+
+
+
+function dijubarCuadradoAmarillo(x,y)
+{	
+var pantalla = document.querySelector("canvas");
+var pincel= pantalla.getContext("2d");
+pincel.fillStyle = "yellow"; //propiedad
+pincel.fillRect(x,y,50,50); //funcion
+pincel.strokeStyle = "black";
+pincel.strokeRect(x,y,50,50);
+}// fin funcion dibujar cuadrado amarillo
+
+
+
+
+function dijubarCuadradoVerde(x,y)
+{	
+var pantalla = document.querySelector("canvas");
+var pincel= pantalla.getContext("2d");
+pincel.fillStyle = "green"; //propiedad
+pincel.fillRect(x,y,50,50); //funcion
+pincel.strokeStyle = "black";
+pincel.strokeRect(x,y,50,50);
+}// fin funcion dibujar cuadrado verde
+
+
+dijubarCuadradoRojo(0,0);
+dijubarCuadradoAmarillo(0,50);
+dijubarCuadradoVerde(0,100);
+*/
+
+
+function dijubarCuadrado(x,y,color)
+{	
+var pantalla = document.querySelector("canvas");
+var pincel= pantalla.getContext("2d");
+pincel.fillStyle = color; //propiedad
+pincel.fillRect(x,y,50,50); //funcion
+pincel.strokeStyle = "black";
+pincel.strokeRect(x,y,50,50);
+}// fin funcion dibujar cuadrado
+
+dijubarCuadrado(0,0,"red");
+dijubarCuadrado(0,50,"yellow");
+dijubarCuadrado(0,100,"green");
+
+
+</script>
