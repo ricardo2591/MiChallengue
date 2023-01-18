@@ -49,14 +49,14 @@ dijubarCuadradoVerde(0,100);
 
 
 function dijubarCuadrado(x,y,color)
-{	
-var pantalla = document.querySelector("canvas");
-var pincel= pantalla.getContext("2d");
-pincel.fillStyle = color; //propiedad
-pincel.fillRect(x,y,50,50); //funcion
-pincel.strokeStyle = "black";
-pincel.strokeRect(x,y,50,50);
-}// fin funcion dibujar cuadrado
+    {	
+    var pantalla = document.querySelector("canvas");
+    var pincel= pantalla.getContext("2d");
+    pincel.fillStyle = color; //propiedad
+    pincel.fillRect(x,y,50,50); //funcion
+    pincel.strokeStyle = "black";
+    pincel.strokeRect(x,y,50,50);
+    }// fin funcion dibujar cuadrado
 
 dijubarCuadrado(0,0,"red");
 dijubarCuadrado(0,50,"yellow");
