@@ -7,20 +7,20 @@ var pincel= pantalla.getContext("2d");
 pincel.fillStyle = "lightgrey"; //propiedad
 pincel.fillRect(0,0,600,400); //funcion
 
-var radio = 10;
+var radio = 20;
 var xAleatorio;
 var yAleatorio;
 
-function disenarCircunferencia(x,y,radio,color)
+function disenarCircunferencia(x,y,radio,color) // en esta funcion disenamos nuestra circunferencia
 {
     pincel.fillStyle = color;
     pincel.beginPath();
-    pincel.arc(x,y,radio,0,2*Math.PI);
+    pincel.arc(x,y,radio,0,10*Math.PI);
     pincel.fill();
 }
 
 
-function limpiarPantalla()
+function limpiarPantalla()// en esta funcion estamos limpiando la pantalla constantemente
 {
     pincel.clearRect(0,0,600,400);
 }
@@ -28,20 +28,20 @@ function limpiarPantalla()
 var x = 0;
 
 
-function disenarObjetivo(x,y)
+function disenarObjetivo(x,y)// en esta funcion fisenamos en tiro al blanco
 {
-    disenarCircunferencia(x,y,radio+20,"red");
-    disenarCircunferencia(x,y,radio+10,"white");
+    disenarCircunferencia(x,y,radio+60,"red");
+    disenarCircunferencia(x,y,radio+40,"white");
     disenarCircunferencia(x,y,radio,"red");
 }
 
-function sortearPosicion(maximo)
+function sortearPosicion(maximo)// en esta funcion movemos de manera aleatoria nuestro tiro al blanco
 {
     return Math.floor(Math.random()*maximo);
 }
 
 
-function actualizarPantalla()
+function actualizarPantalla()// en esta funcion estamos actualizando la pantalla de manera automatica
 {
     limpiarPantalla();
     xAleatorio = sortearPosicion(600);
@@ -52,9 +52,9 @@ function actualizarPantalla()
 
 
 
-setInterval (actualizarPantalla,1000);
+setInterval (actualizarPantalla,1000);// funcion para actualizar la pantalla una vez por segundo
 
-function disparar(evento)
+function disparar(evento)// dentro de esta funcion generamos la accion de poder apuntar con el mouse en el centro del tiro al blanco
 {
     var x=evento.pageX-pantalla.offsetLeft;
     var y=evento.pageY-pantalla.offsetTop;
@@ -67,7 +67,7 @@ function disparar(evento)
 
 }
 
-pantalla.onclick=disparar;
+pantalla.onclick=disparar;// comando para capturar el click del mouse en la pantalla
 
-
+//fin del codigo
 </script>
